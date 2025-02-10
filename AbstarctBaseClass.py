@@ -40,7 +40,7 @@ class Circle(Shape):
 c= Rectangle(4,6)
 print(c.color())
 
-
+#😊😊😊😊😊😊
 #מחלקת תשלום
 class PaymentProcessor(ABC):
     @abstractmethod
