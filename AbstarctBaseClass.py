@@ -1,9 +1,13 @@
 from abc import ABC, abstractmethod
 import math
+import random
 # מחלקת צורות
 class Shape(ABC):
     @abstractmethod
     def area(self):
+        pass
+    @abstractmethod
+    def color(self):
         pass
 
 
@@ -17,6 +21,10 @@ class Rectangle(Shape):
     def area(self):
         return self.width * self.length
 
+    def color(self):
+        colors = "yellow","black","red","blue"
+        return random.choice(colors)
+
 
 class Circle(Shape):
     def __init__(self,radius):
@@ -25,6 +33,12 @@ class Circle(Shape):
     def area(self):
         return self.radius ** 2 * math.pi
 
+    def color(self):
+        colors = "yellow", "black", "red", "blue"
+        return random.choice(colors)
+
+c= Rectangle(4,6)
+print(c.color())
 
 
 #מחלקת תשלום
